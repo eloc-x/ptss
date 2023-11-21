@@ -3,10 +3,10 @@
 namespace App\Model;
 
 class Category {
-    public $name;
-    public $products;
+    public string $name;
+    public array $products;
 
-    public function __construct($name, $products) {
+    public function __construct(string $name, array $products) {
         $this->name = $name;
         $this->products = $products;
     }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category Display with Vue.js</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="app" class="container mt-5">
+        <h1 class="mb-4">Product Categories</h1>
+
+        <div v-for="category in categories" :key="category.name" class="mb-4">
+            <h2>{{ category.name }}</h2>
+            <ul v-if="category.products.length > 0" class="list-group">
+                <li v-for="product in category.products" :key="product.name" class="list-group-item">{{ product.name }}</li>
+            </ul>
+            <p v-else>No products in this category</p>
+        </div>
+    </div>
+
+    <!-- Add Vue.js and Bootstrap JS scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                categories: <?= json_encode($data); ?>,
+            },
+        });
+    </script>
+</body>
+</html>

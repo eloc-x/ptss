@@ -1,8 +1,14 @@
 {
+    "name": "eloc-x/ptss",
+    "version": "1.0.0",
+    "description": "Assessment of PTSS - Product Category",
+    "main": "index.js",
     "scripts": {
-        "serve": "vue-cli-service serve"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "dependencies": {
+    "author": "Cole Thomas",
+    "license": "MIT",
+    "devDependencies": {
         "vue": "^2.6.14"
     }
 }

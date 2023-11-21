@@ -3,9 +3,9 @@
 namespace App\Model;
 
 class Product {
-    public $name;
+    public string $name;
 
-    public function __construct($name) {
+    public function __construct(string $name) {
         $this->name = $name;
     }
 }
